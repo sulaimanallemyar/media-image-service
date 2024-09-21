@@ -1,7 +1,11 @@
 package com.example.image_resizer.rest;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,14 +28,17 @@ public class ImageController {
     public ResponseEntity<String> upload(@RequestBody ImageRequest imageRequest) {
     	log.info("REST request to upload image");
     	
+		JSONObject response = new JSONObject();
+		HttpHeaders httpHeaders = new HttpHeaders();
+		httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+    	
     	String imageUrl = imageService.uploadImage(imageRequest);
-    	JSONObject jsonResult = new JSONObject();
     	
-    	jsonResult.put("status", true);
-    	jsonResult.put("status_code", 200);
-    	jsonResult.put("message", "SUCCESS");
-    	jsonResult.put("data", imageUrl);
+    	response.put("status", true);
+    	response.put("status_code", 200);
+    	response.put("message", "SUCCESS");
+    	response.put("data", imageUrl);
     	
-    	return ResponseEntity.ok(jsonResult.toString());
+    	return new ResponseEntity<>(response.toString(), httpHeaders, HttpStatus.OK);
     }
 }

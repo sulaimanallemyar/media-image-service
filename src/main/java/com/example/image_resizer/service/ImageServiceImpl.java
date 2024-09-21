@@ -95,14 +95,6 @@ public class ImageServiceImpl implements ImageService {
 		} 
 		
 		byte[] resizedImageBytes = baos.toByteArray();
-
-		File outputfile = new File("D:\\home\\2.jpeg");
-		try {
-			ImageIO.write(resizedImage, extension, outputfile);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
 		String resizedImageBase64 = Base64.getEncoder().encodeToString(resizedImageBytes);
 		String fileUrl = fileStorageService.uploadToMinio(resizedImageBase64, extension, contentType, serviceName);
 
