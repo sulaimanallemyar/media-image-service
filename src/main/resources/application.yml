@@ -1,6 +1,9 @@
-server:
-  port: 9005
-
 spring:
   application:
     name: image-service 
+  profiles:
+    active: #spring.profiles.active#    default: dev
+
+server:
+  error:
+    include-stacktrace: never

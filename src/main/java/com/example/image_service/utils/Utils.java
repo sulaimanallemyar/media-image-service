@@ -1,7 +1,6 @@
 package com.example.image_service.utils;
 
-import java.nio.charset.StandardCharsets;
-import org.apache.commons.codec.binary.Base64;
+import java.util.Base64;
 
 public class Utils {
 
@@ -14,7 +13,8 @@ public class Utils {
 		}
 
 		try {
-			Base64.decodeBase64(encodedImg.getBytes(StandardCharsets.UTF_8));
+			
+			Base64.getDecoder().decode(encodedImg);
 			return false;
 		} catch (Exception e) {
 			return true;

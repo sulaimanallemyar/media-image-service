@@ -1,0 +1,6 @@
+server:
+  port: 8025
+    
+logging:
+  file:
+    path: /home/software/image_service/logs
