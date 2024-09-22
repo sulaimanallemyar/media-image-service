@@ -1,3 +1,14 @@
 server:
   port: 9005
 
+logging:
+  file:
+    path: logs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8060/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

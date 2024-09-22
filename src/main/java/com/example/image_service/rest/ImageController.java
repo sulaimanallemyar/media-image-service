@@ -19,7 +19,7 @@ import com.example.image_service.utils.Utils;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping
 @Slf4j
 public class ImageController {
 

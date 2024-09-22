@@ -3,6 +3,9 @@ spring:
     name: image-service 
   profiles:
     active: #spring.profiles.active#    default: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 server:
   error:

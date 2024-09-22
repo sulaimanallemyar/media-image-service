@@ -1,6 +1,6 @@
 # Media Image Service
 
-This service provides image upload, image resize and provides CDN URL to access the image.
+This service provides image upload, image resize and provides URL to access the image.
 
 ## Table of Contents
 

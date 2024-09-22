@@ -12,7 +12,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>media-image-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>image-image-microservice</name>
+	<name>media-image-microservice</name>
 	<description>Image uploader, resizer project using Spring Boot
 	</description>
 	<url />
@@ -30,6 +30,7 @@
 	</scm>
 	<properties>
 		<java.version>11</java.version>
+		<spring-cloud.version>2021.0.7</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,9 +60,26 @@
 			<artifactId>json</artifactId>
 			<version>20231013</version>
 		</dependency>
+			<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 	</dependencies>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<build>
+		<finalName>media-image-microservice</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
