@@ -13,6 +13,7 @@ This service provides image upload, image resize and provides URL to access the 
 Before you begin, ensure you have met the following requirements:
 
 - JAVA 11 (also set your jave home in environment variables)
+- Minio
 
 Here are the steps to get your development environment running:
 
