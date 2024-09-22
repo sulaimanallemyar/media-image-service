@@ -1,4 +1,4 @@
-package com.example.image_resizer.rest;
+package com.example.image_service.rest;
 
 import lombok.Data;
 

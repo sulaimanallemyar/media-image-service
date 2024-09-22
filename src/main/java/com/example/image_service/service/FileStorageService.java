@@ -1,4 +1,4 @@
-package com.example.image_resizer.service;
+package com.example.image_service.service;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.image_resizer.utils.MinioConnector;
+import com.example.image_service.utils.MinioConnector;
 
 import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;

@@ -1,4 +1,4 @@
-package com.example.image_resizer.service;
+package com.example.image_service.service;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.image_resizer.rest.ImageRequest;
+import com.example.image_service.rest.ImageRequest;
 
 @Service
 public class ImageServiceImpl implements ImageService {

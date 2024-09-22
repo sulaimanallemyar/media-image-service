@@ -1,4 +1,4 @@
-package com.example.image_resizer.utils;
+package com.example.image_service.utils;
 
 import io.minio.MinioClient;
 
